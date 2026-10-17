@@ -63,6 +63,8 @@ python3 run_game.py
 
 The build is written to `dist/`. Blender is needed only to regenerate the scene assets; see [scene documentation](blender/README.md). Further technical notes: [architecture](docs/ARCHITECTURE.md) and [validation](docs/VALIDATION.md).
 
+After building from source on macOS, run `chmod +x macOS.command` in the repository root before double-clicking the launcher, or run `python3 run_game.py` directly.
+
 ## Fiction and rights
 
 All institutions, cities, universities, characters, events, salaries, grants, age limits, and review rules are fictional game design. They do not describe identifiable people or promise real-world compensation. [Official reference sources](docs/SOURCES.md) explain the distinctions between academic positions, research funding, honors, and personal income.

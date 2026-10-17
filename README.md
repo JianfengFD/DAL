@@ -86,6 +86,8 @@ python3 run_game.py
 
 `npm run build` 生成 `dist/`；克隆仓库或通过 `Code → Download ZIP` 获取源码后，均需先构建，再使用 Python 启动器。游戏不依赖账号、后端数据库或第三方 API。
 
+macOS 从源码构建后，如需双击启动器，请先在仓库根目录运行 `chmod +x macOS.command`；也可直接运行 `python3 run_game.py`。
+
 | 目录 / 文件 | 内容 |
 | --- | --- |
 | `src/` | 季度模拟引擎、叙事、界面、3D 交互与合成声景 |
