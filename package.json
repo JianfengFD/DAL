@@ -1,0 +1,15 @@
+{
+  "name": "daxia-academic-life",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "大夏·学术浮生 — Blender 场景驱动的学术生涯策略游戏",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test src/engine.test.mjs"
+  },
+  "dependencies": {"three": "^0.180.0"},
+  "devDependencies": {"vite": "^7.1.0", "playwright": "^1.55.0"}
+}

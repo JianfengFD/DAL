@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#183139" />
+  <meta name="description" content="大夏·学术浮生：一款在虚构学界中研究、教学、合作与抉择的生涯策略游戏。Blender 制作的 3D 校园，季度回合制，从本科生到教授，寻找属于自己的学术人生。" />
+  <title>大夏 · 学术浮生 | 论文之外，皆是江湖</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <a class="brand" href="#" id="brand-home" aria-label="返回校园"><span class="brand-mark">夏</span><span><strong>学术浮生</strong><small>DAXIA · ACADEMIC LIFE</small></span><span class="edition">卷一 · 入局</span></a>
+      <nav class="main-nav" aria-label="主要功能">
+        <button class="nav-item active" data-view="campus"><span data-icon="campus"></span>校园</button>
+        <button class="nav-item" data-view="research"><span data-icon="flask"></span>研究</button>
+        <button class="nav-item" data-view="affairs"><span data-icon="folder"></span>事务</button>
+        <button class="nav-item" data-view="network"><span data-icon="people"></span>人脉</button>
+        <button class="nav-item" data-view="career"><span data-icon="laurel"></span>生涯</button>
+      </nav>
+      <div class="top-actions"><button class="icon-button" id="btn-sound" title="开启环境音乐" aria-label="开启环境音乐"><span data-icon="sound"></span></button><button class="icon-button" id="btn-help" title="游玩指南" aria-label="游玩指南"><span data-icon="help"></span></button><button class="icon-button" id="btn-save" title="存档与设置" aria-label="存档与设置"><span data-icon="settings"></span></button></div>
+    </header>
+    <section class="resource-strip" aria-label="本季资源">
+      <div class="season-block"><span class="season-icon" id="season-icon">✳</span><div><small id="calendar-era">夏历 2026 年</small><strong id="calendar-season">春季 <span>第一季度</span></strong></div></div>
+      <div class="resource"><span class="resource-icon" data-icon="wallet"></span><div><span>个人存款 <i>万元</i></span><strong id="stat-money">—</strong></div><small id="money-flow"></small></div>
+      <div class="resource"><span class="resource-icon" data-icon="fund"></span><div><span>课题经费 <i>万元</i></span><strong id="stat-funding">—</strong></div><small id="funding-hint">专款专用</small></div>
+      <div class="resource"><span class="resource-icon" data-icon="sparkle"></span><div><span>学术声誉</span><strong id="stat-reputation">—</strong></div><div class="mini-spark" id="rep-spark">▁▂▂▃▂▄▅</div></div>
+      <div class="resource"><span class="resource-icon" data-icon="file"></span><div><span>已发表论文</span><strong id="stat-papers">0 <em>篇</em></strong></div><small id="paper-hint">从第一个问题开始</small></div>
+      <div class="time-resource"><span>本季时间</span><div id="ap-dots" class="ap-dots"></div><strong id="ap-number">4 / 4</strong></div>
+    </section>
+    <main class="game-layout">
+      <aside class="scholar-panel" aria-label="学者档案">
+        <div class="panel-eyebrow"><span>学者档案</span><span class="tiny-stamp">ACADEMIA</span></div>
+        <div class="avatar-wrap"><svg class="scholar-avatar" viewBox="0 0 160 150" aria-hidden="true"><defs><clipPath id="avatar-clip"><rect width="160" height="150" rx="3"/></clipPath><linearGradient id="avatar-bg" x2="1" y2="1"><stop stop-color="#d7e1d6"/><stop offset="1" stop-color="#b6c9bd"/></linearGradient></defs><g clip-path="url(#avatar-clip)"><path fill="url(#avatar-bg)" d="M0 0h160v150H0z"/><path d="M-10 118L160 22v19L-10 137z" fill="#eff2df" opacity=".26"/><circle cx="126" cy="28" r="18" fill="#e6d9ad" opacity=".7"/><path d="M41 155v-31c0-18 17-30 38-30s40 11 40 30v31" fill="#345659"/><path d="M66 96l13 10 14-11 12 55H55z" fill="#eee9da"/><path d="M72 99h15v15H72z" fill="#c9a580"/><path d="M76 113h7l4 36H72z" fill="#bb714e"/><path d="M51 68c-2-29 8-43 29-43 22 0 35 16 31 43l-8 22-14 13H72L56 88z" fill="#e1bb91"/><path d="M53 67l-5-10 3-24 13-14 27 1 19 13 3 28-9 7-2-23-12-7-14 7-16 1-2 22z" fill="#233c41"/><path d="M60 64h16v12H60zm24 0h16v12H84z" fill="#aec2b7" stroke="#2e4545" stroke-width="2.5"/><path d="M77 68h7" stroke="#2e4545" stroke-width="2.5"/><path d="M73 87q8 6 15 0" fill="none" stroke="#9a7256" stroke-width="2"/><path d="M47 129l20-23-6 39m49-16l-17-24 8 40" fill="none" stroke="#274346" stroke-width="2"/><path d="M112 132h-13v14h13" fill="#b5c8be"/><path d="M106 126v11" stroke="#d5aa61" stroke-width="2"/><path d="M131 130l-6-22 8-11 7 4-2 20" fill="#d1b18a"/><path d="M124 114l13 5-7 34-17-5z" fill="#345659"/><path d="M130 96l7-20" stroke="#f0dfb8" stroke-width="3"/></g></svg><div class="avatar-badge" id="career-badge">本科生</div></div>
+        <h1 id="scholar-name">林知远 <span>18 岁</span></h1>
+        <p class="scholar-location"><span data-icon="pin"></span><span id="scholar-location">大江市 · 澄江大学</span></p>
+        <div class="scholar-tags" id="scholar-tags"><span>凝聚态与材料</span><span>初入学界</span></div>
+        <div class="profile-bars">
+          <div><span>身心健康</span><strong id="health-number">90</strong><div class="meter"><i id="health-bar" style="width:90%"></i></div></div>
+          <div><span>考核压力</span><strong id="stress-number">10</strong><div class="meter pressure"><i id="stress-bar" style="width:10%"></i></div></div>
+          <div><span>学术操守</span><strong id="integrity-number">85</strong><div class="meter integrity"><i id="integrity-bar" style="width:85%"></i></div></div>
+        </div>
+        <div class="skill-grid" id="skill-grid"></div>
+        <button class="text-link" id="btn-profile">查看完整履历 <span>↗</span></button>
+        <button class="mobile-profile-toggle" id="btn-mobile-profile">查看状态</button>
+        <div class="scholar-quote"><span>“</span><p id="scholar-quote">我们为什么出发，<br>有时比走到哪里更重要。</p><small>写在实验记录本的扉页</small></div>
+      </aside>
+      <section class="world-panel" aria-label="校园地图">
+        <div class="world-topline"><div><span class="live-dot"></span><span id="world-location">大江市 · 澄江大学</span><span class="map-slash">/</span><small id="world-weather">春和景明，宜做研究</small></div><button id="btn-city" class="map-button"><span data-icon="globe"></span>大夏舆图 <span>↗</span></button></div>
+        <div class="world-title"><span class="eyebrow">THE CAMPUS · 你的学术起点</span><h2 id="world-title">此间，尚有无数可能。</h2><p id="world-subtitle">点击建筑，开始本季的故事。</p></div>
+        <div id="scene-container"><div id="scene-loading"><div class="loading-orbit"></div><span>正在走进大夏校园…</span></div><div id="building-labels"></div></div>
+        <div id="scene-unavailable" hidden><span>校园模型暂未载入</span><p>所有事务仍可通过下方行动栏办理。</p></div>
+        <div class="map-legend"><span><i class="legend-dot"></i>可访问建筑</span><span><i class="legend-dot warm"></i>当前地点</span></div>
+        <div class="map-controls"><button id="btn-rotate-left" aria-label="向左旋转校园" title="向左旋转">↶</button><button id="btn-reset-camera" aria-label="恢复地图视角" title="恢复视角"><span data-icon="campus"></span></button><button id="btn-rotate-right" aria-label="向右旋转校园" title="向右旋转">↷</button></div>
+        <div class="map-caption"><span>DX / CAMPUS 01</span><span>拖动旋转 · 滚轮缩放 · 点击进入</span></div>
+        <div id="view-overlay" class="view-overlay" hidden></div>
+      </section>
+      <aside class="agenda-panel" aria-label="本季事务">
+        <div class="agenda-heading"><div><span class="eyebrow">QUARTERLY BRIEF</span><h2>本季手记 <i id="brief-quarter">01</i></h2></div><span data-icon="notebook"></span></div>
+        <div class="agenda-tabs"><button class="active" data-agenda="agenda">事务</button><button data-agenda="journal">风声 <span id="journal-count">0</span></button></div>
+        <div id="agenda-content"></div>
+        <div class="quarter-bottom"><p id="quarter-tip">每季度有 4 格时间。选择，也意味着放下。</p><button class="advance-button" id="btn-next"><span data-icon="hourglass"></span><span>结束本季</span><span class="advance-arrow">→</span></button><small>进入下一季度 · 自动保存进度</small></div>
+      </aside>
+    </main>
+    <footer class="action-dock"><div class="dock-title"><small>如何度过</small><strong>这一季？</strong></div><div class="action-cards" id="action-cards"></div><button class="dock-more" id="btn-all-actions" aria-label="全部行动"><span data-icon="grid"></span><span>全部行动</span></button></footer>
+    <div class="status-bar"><span><i></i><span id="save-status">此刻的选择，会成为日后的履历。</span></span><span>by JF_Li@FD &amp; Sol <b>v1.0</b></span></div>
+  </div>
+  <div id="toast-region" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <input type="file" id="import-save" accept="application/json,.json" hidden />
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
